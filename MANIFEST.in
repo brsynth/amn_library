@@ -1,0 +1,2 @@
+recursive-include amn/models *.xml
+recursive-include amn/models *.npz
