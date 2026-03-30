@@ -234,7 +234,7 @@ def pred_amn (argv=None):
                 if len(extracted_model) != 1:
                     raise FileNotFoundError(f"Expected exactly one .h5 file, found {len(extracted_model)}")
                 if len(extracted_cobra) != 1:
-                    raise FileNotFoundError(f"Expected exactly one .h5 file, found {len(extracted_cobra)}")
+                    raise FileNotFoundError(f"Expected exactly one .xlm file, found {len(extracted_cobra)}")
 
 
             # Call prediction using extracted files

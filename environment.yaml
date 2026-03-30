@@ -16,6 +16,6 @@ dependencies:
   - typing_extensions =4.5.0
   - pip
   - ipykernel
-  - tensorflow =2.13.0
+  - tensorflow =2.4.1
   - tensorflow-probability
   - importlib-resources
