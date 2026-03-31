@@ -1,4 +1,4 @@
-name: reservoir
+name: test_reservoir
 channels:
   - defaults
   - conda-forge
@@ -16,6 +16,6 @@ dependencies:
   - typing_extensions =4.5.0
   - pip
   - ipykernel
-  - tensorflow =2.12.0
+  - tensorflow =2.12.1
   - tensorflow-probability
   - importlib-resources
