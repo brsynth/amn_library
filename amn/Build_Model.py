@@ -19,8 +19,8 @@ from amn.Import import *
 def sharp_sigmoid(x):
     # Custom activation function
     return K.sigmoid(10000.0 * x)
-from tensorflow.keras.utils import get_custom_objects, CustomObjectScope
-from tensorflow.keras.layers import Activation, Lambda
+from keras.utils import get_custom_objects, CustomObjectScope
+from keras.layers import Activation, Lambda
 get_custom_objects().update({'sharp_sigmoid': Activation(sharp_sigmoid)})
 
 def my_mse(y_true, y_pred):
@@ -55,7 +55,7 @@ def CROP(dimension, start, end):
     # Crops (or slices) a Tensor on a given dimension from start to end
     # example : to crop tensor x[:, :, 5:10]
     # call x = crop(2,5,10)(x) to slice the second dimension
-    from tensorflow.keras.layers import Lambda
+    from keras.layers import Lambda
     def func(x):
         if dimension == 0:
             return x[start: end]
@@ -165,9 +165,9 @@ def Loss_all(V, Vinko, Vout, parameter):
 # Dense model
 # ##############################################################################
 
-from tensorflow.keras.layers import Input, Dense, Dropout, Flatten, Activation, BatchNormalization
-from tensorflow.keras.layers import Reshape, multiply
-from tensorflow.keras.layers import concatenate, add, subtract, dot
+from keras.layers import Input, Dense, Dropout, Flatten, Activation, BatchNormalization
+from keras.layers import Reshape, multiply
+from keras.layers import concatenate, add, subtract, dot
 
 def input_ANN_Dense(parameter, verbose=False):
     # Shape X and Y depending on the model used
@@ -180,7 +180,7 @@ def input_ANN_Dense(parameter, verbose=False):
     
 def Dense_layers(inputs, parameter, trainable=True, verbose=False):
     # Build a dense architecture with some hidden layers
-    from tensorflow.keras.regularizers import l2
+    from keras.regularizers import l2
     
     activation=parameter.activation
     n_hidden=parameter.n_hidden
@@ -614,9 +614,9 @@ def train_evaluate_model(parameter, failure=0, temperature=0, verbose=False):
 # ##############################################################################
 
 from amn.Build_Dataset import TrainingSet
-from tensorflow.keras.models import load_model
-from tensorflow.keras.models import Model
-from tensorflow.keras.models import model_from_json
+from keras.models import load_model
+from keras.models import Model
+from keras.models import model_from_json
     
 from sklearn.metrics import r2_score 
 from sklearn.metrics import accuracy_score, f1_score, matthews_corrcoef
@@ -760,7 +760,7 @@ class Neural_Model:
             h.write(s)
         self.model.save(filemodel)
 
-    def load(self, filename, fileparam, filemodel, output_dim=-1, verbose=False):
+    def load(self, filename, fileparam=None, filemodel=None, output_dim=-1, verbose=False):
         if filename == "" or filename is None:
             fileparam = fileparam
             filemodel = filemodel
