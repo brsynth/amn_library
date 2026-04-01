@@ -1,4 +1,4 @@
-name: test_reservoir
+name: reservoir
 channels:
   - defaults
   - conda-forge
