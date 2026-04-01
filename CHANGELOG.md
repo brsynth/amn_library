@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.3](https://github.com/brsynth/amn_library/tree/0.1.3) (2026-04-01)
+
+[Full Changelog](https://github.com/brsynth/amn_library/compare/0.1.2...0.1.3)
+
 ## [0.1.2](https://github.com/brsynth/amn_library/tree/0.1.2) (2026-03-31)
 
 [Full Changelog](https://github.com/brsynth/amn_library/compare/0.1.1...0.1.2)
