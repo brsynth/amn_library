@@ -63,8 +63,8 @@ def predict_amn(
         }
     }
 
-    if organism not in PRESETS:
-        raise ValueError(f"Organism must be one of {list(PRESETS.keys())}")
+    #if organism not in PRESETS:
+        #raise ValueError(f"Organism must be one of {list(PRESETS.keys())}")
 
     cfg = PRESETS[organism]
 

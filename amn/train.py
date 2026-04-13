@@ -61,8 +61,8 @@ def build_training_set(
             "cobra_file": get_default_model('biolog','build')
         }
     }
-    if organism not in PRESETS:
-        raise ValueError(f"Organism must be one of {list(PRESETS.keys())}")
+    #if organism not in PRESETS:
+        #raise ValueError(f"Organism must be one of {list(PRESETS.keys())}")
 
     cfg = PRESETS[organism]
 
@@ -149,8 +149,8 @@ def train_gr_prediction(
             "batch_size": 100
         }
     }
-    if organism not in PRESETS:
-        raise ValueError(f"Organism must be one of {list(PRESETS.keys())}")
+    #if organism not in PRESETS:
+        #raise ValueError(f"Organism must be one of {list(PRESETS.keys())}")
 
     cfg = PRESETS[organism]
 
