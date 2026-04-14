@@ -59,6 +59,10 @@ def build_training_set(
 
         "biolog": {
             "cobra_file": get_default_model('biolog','build')
+        },
+
+        "custom": {
+            "cobra_file": cobra_file
         }
     }
     #if organism not in PRESETS:
@@ -147,6 +151,17 @@ def train_gr_prediction(
             "xfold": 5,
             "niter": 0,
             "batch_size": 100
+        },
+        
+        "custom": {
+            "trainingfile": trainingfile,
+            "cobraname_override": cobraname_override,
+            "n_hidden": n_hidden,
+            "hidden_dim": hidden_dim,
+            "epochs": epochs,
+            "xfold": xfold,
+            "niter": niter,
+            "batch_size": batch_size
         }
     }
     #if organism not in PRESETS:

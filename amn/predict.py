@@ -60,6 +60,11 @@ def predict_amn(
         "biolog": {
             "cobra_file": get_default_model('biolog','build'),
             "metric": "r2_score"
+        },
+
+        "custom": {
+            "cobra_file": cobra_file,
+            "metric": metric
         }
     }
 
